@@ -1,13 +1,15 @@
 from turtle import Turtle, Screen
 
+SNAKE_STARTING_SIZE = 3
+
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Johanna's Snake Game")
 
-snake = Turtle()
-snake.shape("square")
-snake.color("white")
+for _ in range(3):
+    snake = Turtle(shape="square")
+    snake.color("white")
 
 # TODO: move snake body
 # TODO: steer snake
