@@ -23,6 +23,7 @@ game_is_on = True
 while game_is_on:
     for segment in snake:
         segment.forward(40)
+    screen.update()
 
 # TODO: move snake body
 # TODO: steer snake
