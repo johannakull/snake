@@ -7,12 +7,14 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Johanna's Snake Game")
 
+snake = []
 x_pos = 0
 
 for _ in range(3):
-    snake = Turtle(shape="square")
-    snake.color("white")
-    snake.setx(x_pos)
+    snake_segment = Turtle(shape="square")
+    snake_segment.color("white")
+    snake_segment.setx(x_pos)
+    snake.append(snake_segment)
     x_pos -= 20
 
 # TODO: move snake body
