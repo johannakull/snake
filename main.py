@@ -10,7 +10,7 @@ screen.title("Johanna's Snake Game")
 snake = []
 x_pos = 0
 
-for _ in range(3):
+for _ in range(SNAKE_STARTING_SIZE):
     snake_segment = Turtle(shape="square")
     snake_segment.color("white")
     snake_segment.setx(x_pos)
