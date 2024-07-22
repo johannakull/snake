@@ -4,6 +4,7 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Johanna's Snake Game")
+screen.tracer(0)
 
 snake = []
 starting_positions = [(0, 0), (-20, 0), (-40, 0)]
@@ -14,6 +15,8 @@ for position in starting_positions:
     snake_segment.penup()
     snake_segment.goto(position)
     snake.append(snake_segment)
+
+screen.update()
 
 game_is_on = True
 
