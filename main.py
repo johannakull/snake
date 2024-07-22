@@ -22,10 +22,16 @@ screen.update()
 game_is_on = True
 
 while game_is_on:
-    for segment in snake:
-        segment.forward(20)
     screen.update()
     time.sleep(0.1)
+
+    for segment_num in range(len(snake) - 1, 0, -1): # start, stop, step - note that it will stop immediately once it reaches stop value
+        # get the coordinates of the segment ahead of the current segment
+        new_x = snake[segment_num - 1].xcor()
+        new_y = snake[segment_num - 1].ycor()
+        # move the segment to the new coordinates
+        snake[segment_num].goto(new_x, new_y)
+    snake[0].forward(20)
 
 # TODO: steer snake
 # TODO: detect collision with food
