@@ -23,7 +23,7 @@ game_is_on = True
 
 while game_is_on:
     for segment in snake:
-        segment.forward(40)
+        segment.forward(20)
     screen.update()
     time.sleep(0.1)
 
