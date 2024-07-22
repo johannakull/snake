@@ -5,8 +5,10 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Johanna's Snake Game")
 
+snake = Turtle()
+snake.shape("square")
+snake.color("white")
 
-# TODO: create snake body
 # TODO: move snake body
 # TODO: steer snake
 # TODO: detect collision with food
