@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 
 SNAKE_STARTING_SIZE = 3
+SNAKE_SEGMENT_SIZE = 20
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -15,7 +16,7 @@ for _ in range(SNAKE_STARTING_SIZE):
     snake_segment.color("white")
     snake_segment.setx(x_pos)
     snake.append(snake_segment)
-    x_pos -= 20
+    x_pos -= SNAKE_SEGMENT_SIZE
 
 # TODO: move snake body
 # TODO: steer snake
