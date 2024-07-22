@@ -1,22 +1,25 @@
 from turtle import Turtle, Screen
 
-SNAKE_STARTING_SIZE = 3
-SNAKE_SEGMENT_SIZE = 20
-
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Johanna's Snake Game")
 
 snake = []
-x_pos = 0
+starting_positions = [(0, 0), (-20, 0), (-40, 0)]
 
-for _ in range(SNAKE_STARTING_SIZE):
+for position in starting_positions:
     snake_segment = Turtle(shape="square")
     snake_segment.color("white")
-    snake_segment.setx(x_pos)
+    snake_segment.penup()
+    snake_segment.goto(position)
     snake.append(snake_segment)
-    x_pos -= SNAKE_SEGMENT_SIZE
+
+game_is_on = True
+
+while game_is_on:
+    for segment in snake:
+        segment.forward(40)
 
 # TODO: move snake body
 # TODO: steer snake
