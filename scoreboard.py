@@ -1,5 +1,8 @@
 from turtle import Turtle
 
+ALIGNMENT = "center"
+FONT = ("Courier", 18, "normal")
+
 
 class Scoreboard(Turtle):
 
@@ -12,7 +15,7 @@ class Scoreboard(Turtle):
         self.display_score()
 
     def display_score(self):
-        self.write(f"Score: {self.score}", align="center", font=("Arial", 18, "normal"))
+        self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
 
     def increase_score(self):
         self.score += 1
