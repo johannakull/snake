@@ -31,7 +31,6 @@ while game_is_on:
         food.refresh()
         scoreboard.increase_score()
 
-# TODO: keep track of score
 # TODO: detect collision with wall
 # TODO: detect snake's collision with itself
 screen.exitonclick()
