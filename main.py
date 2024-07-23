@@ -23,10 +23,11 @@ game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.1)
-
     snake.move()
 
-# TODO: detect collision with food
+    if snake.head.distance(food) < 15:
+        food.refresh()
+
 # TODO: keep track of score
 # TODO: detect collision with wall
 # TODO: detect snake's collision with itself
