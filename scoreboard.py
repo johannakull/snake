@@ -6,9 +6,9 @@ class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        self.setpos(0, 270)
         self.color("white")
         self.hideturtle()
+        self.setpos(0, 270)
         self.display_score()
 
     def display_score(self):
@@ -18,4 +18,3 @@ class Scoreboard(Turtle):
         self.score += 1
         self.clear()
         self.display_score()
-        
