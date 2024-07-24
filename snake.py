@@ -29,8 +29,7 @@ class Snake:
         self.add_segment(self.segments[-1].position())
 
     def move(self):
-        for segment_num in range(len(self.segments) - 1, 0,
-                                 -1):  # start, stop, step - note that it will stop immediately once it reaches stop value
+        for segment_num in range(len(self.segments) - 1, 0, -1):
             # get the coordinates of the segment ahead of the current segment
             new_x = self.segments[segment_num - 1].xcor()
             new_y = self.segments[segment_num - 1].ycor()
