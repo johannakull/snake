@@ -1,6 +1,7 @@
 from turtle import Turtle
 from random import randint
 
+
 class Food(Turtle):
 
     def __init__(self):
@@ -16,4 +17,3 @@ class Food(Turtle):
         random_x = randint(-270, 270)
         random_y = randint(-270, 270)
         self.goto(random_x, random_y)
-
