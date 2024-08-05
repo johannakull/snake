@@ -3,6 +3,7 @@ from snake import Snake
 from scoreboard import Scoreboard
 from time import sleep
 from turtle import Screen, bye
+from welcome_message import WelcomeMessage
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -10,9 +11,15 @@ screen.bgcolor("black")
 screen.title("Johanna's Snake Game")
 screen.tracer(0)
 
+scoreboard = Scoreboard()
+
+welcome_message = WelcomeMessage()
+screen.update()
+sleep(5)
+welcome_message.hide()
+
 snake = Snake()
 food = Food()
-scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
