@@ -1,4 +1,3 @@
-from time import sleep
 from turtle import Turtle
 
 HEADING_FONT = ("Courier", 18, "normal")
