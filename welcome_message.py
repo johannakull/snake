@@ -9,7 +9,6 @@ LINE_BREAK_DISTANCE = 20
 PARAGRAPH_BREAK_DISTANCE = 30
 
 
-
 class WelcomeMessage(Turtle):
 
     def __init__(self):
@@ -17,6 +16,7 @@ class WelcomeMessage(Turtle):
         self.penup()
         self.hideturtle()
         self.setpos(HEADING_POS)
+        self.setheading(270)
         self.color("white")
         self.display_heading()
         self.display_body()
@@ -25,7 +25,6 @@ class WelcomeMessage(Turtle):
         self.write(f"Welcome to Snake!", align="center", font=HEADING_FONT)
 
     def display_body(self):
-        self.setheading(270)
         self.forward(DOUBLE_LINE_BREAK_DISTANCE)
         self.write("To navigate, use the arrow keys.", align="center", font=BODY_FONT)
         self.forward(LINE_BREAK_DISTANCE)
